@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* General styling */
+        *{
+            font-size: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background-color: antiquewhite;
+        }
+
+        .grid-container{
+            padding: 20px;
+        }
+
+        .grid-item{
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease; /* Makes the hovering smooth */
+        }
+
+        .grid-item:hover{
+            background-color: burlywood;
+            transform: translateY(-5px);
+        }
+
+        /* Grid */
+        /* Using px */
+        .grid-container{
+            display: grid;
+            grid-template-columns: 200px 200px 200px;
+            /* grid-template-rows: 100px 300px; */
+            grid-auto-rows: 100px 300px;
+        }
+
+        /* Using percentage values */
+        .grid-container{
+            grid-template-columns: repeat(4, 25%);
+        }
+
+        /* Using Fr (fraction) */
+        .grid-container{
+            /* 1fr 2fr 1fr 1fr */
+            grid-template-columns: repeat(2, 1fr 2fr);
+        }
+
+        /* Gaps */
+        .grid-container{
+            /* column-gap: 20px;
+            grid-row-gap: 10px; */
+
+            gap: 5px 7px; /* row gap, column gap */
+        }
+
+        /* MEDIA QUERIES */
+        /* 
+            @media media-type (media-feature/condition){
+                * insert css blocks here *
+            }
+
+            Mobile Devices: Less than 481px
+            iPads, Tablets: 481px - 768px
+            Small Screens, Laptops: 769px - 1024px
+            Desktops, Large Screens: 1025px - 1200px
+            Extra Large Screens, TV: 1201px and greater
+        */
+
+        /* Media query for large screens */
+        @media screen and (min-width: 1025px){
+            .grid-container{
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* Media query for small to laptop screens */
+        @media screen and (min-width: 769px) and (max-width: 1024px){
+            .grid-container{
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Media query for iPad and tablet */
+        @media screen and (min-width: 481px) and (max-width: 768px){
+            .grid-container{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Media query for mobile devices */
+        @media screen and (max-width: 480px){
+            .grid-container{
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .grid-item-7, .grid-item-8, .grid-item-9{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item grid-item-1">Services</div>
+        <div class="grid-item grid-item-2">About Us</div>
+        <div class="grid-item grid-item-3">Contact Us</div>
+        <div class="grid-item grid-item-4">Mission</div>
+        <div class="grid-item grid-item-5">Vision</div>
+        <div class="grid-item grid-item-6">Featured Product</div>     
+        <div class="grid-item grid-item-7">Product 1</div>
+        <div class="grid-item grid-item-8">Product 2</div>
+        <div class="grid-item grid-item-9">Product 3</div>
+        
+    </div>
+</body>

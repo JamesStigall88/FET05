@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .block{
+            display: block;
+            width: 200px;
+            height: 100px;
+            background-color: tomato;
+        }
+
+        .inline{
+            display: inline;
+            background-color: aqua;
+            width: 200px; /* Does not work no matter what */
+        }
+
+        .inline-block{
+            display: inline-block;
+            background-color: greenyellow;
+            width: 210px;
+        }
+
+        .none{
+            display: none; /* Invisibility */
+        }
+
+        /* Flex */
+        .flex-container{
+            height: 200px;
+            background-color: lightgray;
+            margin-bottom: 20px;
+
+            /* Flex properties */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Grid */
+        .grid-container{
+            height: 200px;
+            background-color: lightgray;
+
+            /* Grid properties */
+            display: grid;
+            place-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Displays -->
+    <div class="block">This is a block element.</div>
+    <div class="inline">This is an inline element.</div>
+    <div class="inline">This is an inline element.</div>
+    <div class="inline-block">This is an inline block element.</div>
+    <div class="inline-block none">This is an inline block element.</div>
+
+    <br><br>
+    
+    <!-- Centering -->
+    <div class="flex-container">
+        <div class="centered-div">
+            Flex container
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <div class="centered-div">
+            Grid container
+        </div>
+    </div>
+</body>
+</html>

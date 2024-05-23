@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            /* General styling */
+            height: 300px;
+            background-color: green;
+            margin-bottom: 20px;
+        }
+
+        .flexItems{
+            width: 100px;
+            margin: 10px;
+            border: 2px black solid;
+            background-color: lightblue;
+            text-align: center;
+        }
+
+        /* Flex properties */
+        .flexContainer{
+            display: flex;
+            flex-direction: row; /* Sets the MAIN axis */
+            justify-content: space-between; /* Sets the alignment 
+            based on the MAIN axis (start, center, end,
+            space-around, space-evenly, and space-between)*/
+            align-items: stretch; /* Sets the alignment based on the CROSS axis 
+            (start, center, end, and stretch) */
+
+        }
+
+        /* Flex Grow - Willingness to grow */
+        .flexItem1{
+            flex-grow: 0; /* This will not grow */
+        }
+
+        .flexItem2{
+            flex-grow: 1; /* Will grow */
+        }
+
+        .flexItem3{
+            flex-grow: 2; /* More willing to grow */
+        }
+
+        /* Flex Stretch - Willingness to shrink */
+        .flexItem1{
+            flex-shrink: 2; /* More willing to shrink */
+        }
+
+        .flexItem2{
+            flex-shrink: 1; /* Willing to shrink, default behavior */
+        }
+
+        .flexItem3{
+            flex-shrink: 0; /* Will not shrink */
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Flex layout -->
+    <div class="container flexContainer">
+        <div class="flexItems flexItem1"> 1 </div>
+        <div class="flexItems flexItem2"> 2 </div>
+        <div class="flexItems flexItem3"> 3 </div>
+    </div>
+</body>
+</html>

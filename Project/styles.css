@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(120deg, #ff97a5, #ff6a6f);
+    color: white;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh; /* Viewport height */
+}
+
+header{
+    font-size: 1.5rem;
+}
+
+header, form{
+    min-height: 20vh;
+    display: flex; /*Allows us to center content horizontally */
+    justify-content: center; /* ...horizontally*/
+    align-items: center;  /*...and vertically*/
+}
+
+form input,
+form button{
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background: white;
+}
+
+form button{
+    color: #f63c42;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover{
+    background-color: #f63c42;
+    color: white;
+}
+
+.todo-container{
+    display: flex;
+    justify-content: center; /* Aligns horizontally */
+    align-items: center; /* Aligns vertically */
+}
+
+.todo-list{
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo{
+    margin: 0.5rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between; /* Aligns horizontally */
+    align-items: center; /* Aligns vertically */
+    transition: all 0.5s ease;
+}
+
+.filter-todo{
+    padding: 1rem;
+}
+
+.todo li{
+    flex: 1;
+    /* flex grow, flex shrink, flex bases */
+}
+
+.trash-btn, 
+.complete-btn{
+    background: #f63c42;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.complete-btn{
+    /* background-color: #ff5f75; */
+    background-color: #12cc3a
+}
+
+.todo-item{
+    padding: 0rem 0.5rem; /*top, bottom, left, right*/
+}
+
+.fa-trash .fa-check{
+    pointer-events: none;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall{
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+/* Custom select */
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select{
+    color: #ff6f47;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    width: 12rem;
+}
+
+/* Arrow */
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    background: #ff6f47;
+    cursor: pointer;
+    pointer-events: none;
+}

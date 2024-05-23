@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Ancestor element */
+        .ancestor{
+            position: relative; /* IMPORTANT!!! */
+            border: 2px solid black;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        /* Relative element */
+        .relative{
+            /* Can move based on its original position */
+            position: relative;
+
+            /* Positioning properties
+            top, right, bottom, and left */
+            
+            /* top: 100px; */
+            left: 100px;
+            width: 150px;
+        }
+
+        /* Absolute positioning */
+        .absolute{
+            /* Can move based on its parent/ancestor */
+            position: absolute;
+
+            /* Positioning property */
+            /*top: 0px;*/
+            left: 0px;
+            bottom: 0px;
+            
+        }
+
+        /* Fixed positioning */
+        .fixed{
+            /* Will stay in place while scrolling */
+            position: fixed;
+
+            bottom: 0px;
+            right: 0px;
+        }
+
+
+        /* Sticky positioning */
+        .sticky{
+             /* by default, it is static (default). 
+             But when we reach a certain positioning property, 
+             it becomes fixed */
+            position: sticky;
+
+            top: 0px;
+            bottom: 0px;
+        }
+
+    </style>
+</head>
+<body>
+        <div class="ancestor">
+            <div>This is the first line.</div>
+            <div>This is the second line.</div>
+            <div class="relative">Relative Positioning</div>
+            <div class="absolute">Absolute Positioning</div>
+            <div class="fixed">Fixed Positioning</div>
+        </div>
+
+        <div style="height: 2000px;">Scroll down to see the STICKY element in action.</div>
+        <div class="sticky">Sticky Positioning</div>
+        <div style="height: 2000px;">Scroll down to see the STICKY element in action.</div>
+</body>
+</html>
